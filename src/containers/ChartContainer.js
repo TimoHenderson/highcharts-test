@@ -12,7 +12,6 @@ require('highcharts/modules/exporting')(Highcharts);
 
 const ChartContainer = () => {
     const [chartOptions, setChartOptions] = useState({
-
         yAxis: [{
             height: '75%',
             labels: {
@@ -36,28 +35,29 @@ const ChartContainer = () => {
         }],
         series: [{
             data: [],
-            type: 'candlestick',
+            type: '',
             name: 'AAPL Stock Price',
             id: 'aapl'
-        },
-        {
-            type: 'pivotpoints',
-            linkedTo: 'aapl',
-            zIndex: 0,
-            lineWidth: 1,
-            dataLabels: {
-                overflow: 'none',
-                crop: false,
-                y: 4,
-                style: {
-                    fontSize: 9
-                }
-            }
-        }, {
-            type: 'macd',
-            yAxis: 1,
-            linkedTo: 'aapl'
         }
+            // ,
+            // {
+            //     type: 'pivotpoints',
+            //     linkedTo: 'aapl',
+            //     zIndex: 0,
+            //     lineWidth: 1,
+            //     dataLabels: {
+            //         overflow: 'none',
+            //         crop: false,
+            //         y: 4,
+            //         style: {
+            //             fontSize: 9
+            //         }
+            //     }
+            // }, {
+            //     type: 'macd',
+            //     yAxis: 1,
+            //     linkedTo: 'aapl'
+            // }
         ]
     });
 
